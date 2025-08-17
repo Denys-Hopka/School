@@ -1,26 +1,28 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-<head>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="school_data">
+        <div class="data_tables">
 
+        <?php
+            require_once 'SchoolData.php';
+            $school_data = new SchoolData();
+            $school_data->print_classes();
 
-<?php
-    try{
-        $conn = new PDO('mysql:host=db:3306;dbname=db', "db", "db"
-        // , array(PDO::ATTR_PERSISTENT => true)
-        );
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = 'SELECT first_name FROM students';
-        foreach ($conn->query($sql) as $row) {
-            echo $row['first_name'] . "\t";
-        }
-    }catch(Exception $e){
-        echo $e->getMessage();
-    }
-?>
+            if(isset($_GET['class']) AND $_GET['class'] != 0)
+            {
+                $school_data->print_members($_GET['class']);
+            }
 
-</form>
-</body>
+        ?>
+        </div>
+    </body>
 </html>
+
+
+
+
+

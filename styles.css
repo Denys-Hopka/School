@@ -1,0 +1,81 @@
+html {
+  height: 100%;
+}
+
+h1 {
+  font-size: 34px;
+  font-family: Courier, sans-serif;
+  font-weight: bold;
+  color: hsl(177, 36%, 22%);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  font-family: Courier, sans-serif;
+  font-weight: bold;
+  color: hsl(177, 36%, 22%);
+}
+
+button {
+  background-color: #FFFFFF;
+  border: 2px solid hsl(180, 13%, 93%);
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: hsl(180, 13%, 93%);
+  border-color: hsl(180, 14%, 90%);
+}
+
+body {
+  font-size: 15px;
+  font-family: Courier, sans-serif;
+  font-weight: bold;
+  color: hsl(177, 36%, 22%);
+  margin: 0rem 0rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsl(177, 2%, 98%);
+}
+
+.school_data {
+  align-items: center;
+  justify-content: center;
+}
+
+.data_tables {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+table {
+  font-size: 13px;
+  font-family: Courier, sans-serif;
+  font-weight: bold;
+  color: hsl(177, 36%, 22%);
+  border-collapse: collapse;
+  border: solid 1px;
+}
+
+table > :nth-child(n) > :nth-child(n) > :nth-child(n) {
+  border: solid 1px;
+  padding: 0.5rem 1rem;
+}
+
+tr:nth-child(2n-3) {
+  background-color: hsl(180, 13%, 93%);
+}
+
+tr:nth-child(2n) {
+  background-color: hsl(0, 0%, 100%);
+}
+
+/*# sourceMappingURL=styles.css.map */
