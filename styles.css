@@ -78,4 +78,9 @@ tr:nth-child(2n) {
   background-color: hsl(0, 0%, 100%);
 }
 
+.members_tables {
+  display: flex;
+  align-items: flex-start;
+}
+
 /*# sourceMappingURL=styles.css.map */

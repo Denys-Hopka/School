@@ -75,8 +75,6 @@ body{
     margin-right: $mrgn_rght;
 }
 
-
-
 table{
     @include font(13px, bold);
     border-collapse: collapse;
@@ -93,4 +91,10 @@ tr:nth-child(2n - 3){
 }
 tr:nth-child(2n){
     background-color: hsl(0,0,100);
+}
+
+.members_tables{
+    display: flex;
+    align-items: flex-start;
+
 }
