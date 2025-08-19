@@ -25,29 +25,17 @@ html{
     height: 100%;
 }
 
-h1{
-    @include font(34px, bold);
+h6{
+    @include font(22px, bold);
+    margin: 1rem auto;
 }
-
-button{
-    padding: 0.5rem 1rem;
-    @include font(15px, bold);
-
+h6.class_choice_h{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
-
-button{
-    background-color: #FFFFFF;
-    border: 2px solid $clr_dominant_drk;
-    border-radius: 4px;
+h6.teachers_h{
+    margin-top: 0rem;
 }
-button:hover{
-    background-color: $clr_dominant_drk;
-    border-color: $clr_dominant_drk_2;
-
-}
-
-
-
 
 body{
     @include font(15px, bold);
@@ -55,30 +43,17 @@ body{
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
     background-color: $clr_dominant;
-}
 
-.school_data{
-    align-items: center;
-    justify-content: center;
-}
-
-.data_tables{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin-left: $mrgn_lft;
-    margin-right: $mrgn_rght;
 }
 
 table{
     @include font(13px, bold);
     border-collapse: collapse;
     border: solid 1px;
+
 }
 
 table > :nth-child(n) > :nth-child(n) > :nth-child(n){
@@ -90,11 +65,33 @@ tr:nth-child(2n - 3){
     background-color: $clr_dominant_drk;
 }
 tr:nth-child(2n){
-    background-color: hsl(0,0,100);
+    background-color: hsl(0,0%,100%);
+}
+
+.data_tables{
+    margin: 0rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-left: $mrgn_lft;
+    margin-right: $mrgn_rght;
 }
 
 .members_tables{
     display: flex;
     align-items: flex-start;
-
+    column-gap: 1rem;
+    margin-top: 1rem;
 }
+
+.teachers_table, .subjects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .representative{
+     width: 33.33%;
+ }
