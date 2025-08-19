@@ -2,6 +2,7 @@
     class SchoolData
     {
         private $conn;
+
         public function __construct(string $host, $db, $user, $password)
         { 
             $this->conn = new PDO("mysql:host=$host;dbname=$db", $user, $password);
@@ -36,7 +37,7 @@
             HEADER;
 
             echo '<div class="members_tables">';
-            for($onset = 0; $onset < 31; $onset += 10)
+            for($onset = 0; $onset < 30; $onset += 10)
                 {
                     // here we create 1-3 tables with student data
                     $sql_req = <<<REQUEST
@@ -144,13 +145,7 @@
 
             if($links_mode == 1)
             {
-
                 echo '<td>' . '<a href="?class=' . $row[$first_field] . '">' . $row[$first_field] . '</a></td>';
-                if($second_field)
-                {
-                    echo '<td>' . '<a href="?class=' . $row[$second_field] . '">' . $row[$second_field] . '</a></td>';
-                }
-
             }
 
             if($links_mode == 2)
