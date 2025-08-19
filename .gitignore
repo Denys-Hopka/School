@@ -1,0 +1,11 @@
+path_to_your_folder/
+
+node_modules/
+
+database.js
+
+package.json
+
+package-lock.json
+.vscode/launch.json
+.vscode/tasks.json
