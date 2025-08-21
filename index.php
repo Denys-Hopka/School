@@ -8,6 +8,25 @@
         <div class="data_tables">
 
         <?php
+
+            require_once 'core/Router.php';
+
+            $router = new Router();
+            $router->route();
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             try
             {
                 require_once 'SchoolData.php';
