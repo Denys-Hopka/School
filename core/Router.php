@@ -1,16 +1,14 @@
 <?php
 try{
-class Router {
-    public function route($controller = 'HomeController', $method = 'index') {
-        // Hier könnte eine einfache Routing-Logik implementiert werden.
-        // Zum Beispiel: /controller/method
-
+class Router 
+{
+    public function route($controller = 'HomeController', $method = 'index') 
+    {
         require_once __DIR__ . "/../app/controllers/$controller.php";
         $controller = new $controller();
         $controller->$method();
     }
 }
-} catch(Exception $e)
-{
+}catch(Exception $e){
     echo $e->getMessage();
 }

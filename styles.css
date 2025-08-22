@@ -10,12 +10,12 @@ h6 {
   margin: 1rem auto;
 }
 
-h6.class_choice_h {
+h6.class-choice-h {
   margin-top: 2rem;
   margin-bottom: 0rem;
 }
 
-h6.teachers_h {
+h6.teachers-h {
   margin-top: 0rem;
 }
 
@@ -55,7 +55,7 @@ tr:nth-child(2n) {
   background-color: hsl(0, 0%, 100%);
 }
 
-.data_tables {
+.data-tables {
   margin: 0rem 0rem;
   display: flex;
   align-items: center;
@@ -66,14 +66,14 @@ tr:nth-child(2n) {
   margin-right: 4rem;
 }
 
-.members_tables {
+.members-tables {
   display: flex;
   align-items: flex-start;
   column-gap: 1rem;
   margin-top: 1rem;
 }
 
-.teachers_table, .subjects {
+.teachers-table, .subjects {
   display: flex;
   flex-direction: column;
   align-items: center;

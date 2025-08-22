@@ -1,10 +1,9 @@
 <?php
-// require_once __DIR__ . "/../../config/database.php";
-// require_once __DIR__ . "/../../core/Model.php";
-class SchoolClass {
-public $designation;
-public function __constuct($designation1)
+class SchoolClass 
 {
-    $this->designation = $designation1;
-}
+    public $designation;
+    public function __constuct($designation)
+    {
+        $this->designation = $designation;
+    }
 }
