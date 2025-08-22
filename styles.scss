@@ -1,5 +1,5 @@
-$mrgn_lft: 4rem;
-$mrgn_rght: 4rem;
+$mrgn-lft: 4rem;
+$mrgn-rght: 4rem;
 
 
 
@@ -7,17 +7,17 @@ $mrgn_rght: 4rem;
     font-size: $size;
     font-family: $font-family;
     font-weight: $weight;
-    color: $clr_content;
+    color: $clr-content;
 }
 
 
 
-$clr_accent: hsl(178, 26%, 46%);
-$clr_content: hsl(177,36%,22%);
-$clr_dominant: hsl(177,2%,98%);
-$clr_dominant_2: hsl(180, 8%, 96%);
-$clr_dominant_drk: hsl(180, 13%, 93%);
-$clr_dominant_drk_2: hsl(180, 14%, 90%);
+$clr-accent: hsl(178, 26%, 46%);
+$clr-content: hsl(177,36%,22%);
+$clr-dominant: hsl(177,2%,98%);
+$clr-dominant-2: hsl(180, 8%, 96%);
+$clr-dominant-drk: hsl(180, 13%, 93%);
+$clr-dominant-drk-2: hsl(180, 14%, 90%);
 
 
 
@@ -30,7 +30,7 @@ h6{
     margin: 1rem auto;
 }
 h6.class_choice_h{
-    margin-top: 0rem;
+    margin-top: 2rem;
     margin-bottom: 0rem;
 }
 h6.teachers_h{
@@ -45,7 +45,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: $clr_dominant;
+    background-color: $clr-dominant;
 
 }
 
@@ -62,7 +62,7 @@ table > :nth-child(n) > :nth-child(n) > :nth-child(n){
 }
 
 tr:nth-child(2n - 3){
-    background-color: $clr_dominant_drk;
+    background-color: $clr-dominant-drk;
 }
 tr:nth-child(2n){
     background-color: hsl(0,0%,100%);
@@ -75,8 +75,8 @@ tr:nth-child(2n){
     justify-content: flex-start;
     flex-direction: column;
     row-gap: 1rem;
-    margin-left: $mrgn_lft;
-    margin-right: $mrgn_rght;
+    margin-left: $mrgn-lft;
+    margin-right: $mrgn-rght;
 }
 
 .members_tables{

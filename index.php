@@ -27,39 +27,39 @@
 
 
             
-            try
-            {
-                require_once 'SchoolData.php';
-                $host = 'db:3306';
-                $db = 'db';
-                $db_user = 'db';
-                $db_password = 'db';
-                $school_data = new SchoolData($host, $db, $db_user, $db_password);
+            // try
+            // {
+            //     require_once 'SchoolData.php';
+            //     $host = 'db:3306';
+            //     $db = 'db';
+            //     $db_user = 'db';
+            //     $db_password = 'db';
+            //     $school_data = new SchoolData($host, $db, $db_user, $db_password);
                 
-                $school_data->print_classes();
+            //     $school_data->print_classes();
 
-                if(isset($_GET['class']) AND $_GET['class'] != 0 AND !isset($_GET['teacher']))
-                {
-                    $school_data->print_members($_GET['class']);
-                }
-                else if(isset($_GET['class']) AND $_GET['class'] != 0 AND isset($_GET['teacher']) AND $_GET['teacher'] != 0)
-                {
-                    $school_data->print_members($_GET['class']);
-                    $school_data->print_subjects($_GET['teacher']);
-                }
-                else if(!isset($_GET['class']) AND !isset($_GET['teacher']))
-                {
+            //     if(isset($_GET['class']) AND $_GET['class'] != 0 AND !isset($_GET['teacher']))
+            //     {
+            //         $school_data->print_members($_GET['class']);
+            //     }
+            //     else if(isset($_GET['class']) AND $_GET['class'] != 0 AND isset($_GET['teacher']) AND $_GET['teacher'] != 0)
+            //     {
+            //         $school_data->print_members($_GET['class']);
+            //         $school_data->print_subjects($_GET['teacher']);
+            //     }
+            //     else if(!isset($_GET['class']) AND !isset($_GET['teacher']))
+            //     {
 
-                }
-                else
-                {
-                    throw new Exception('Error while creating tables.');
-                }
-            }
-            catch(Exception $e)
-            {
-                echo $e->getMessage();
-            }
+            //     }
+            //     else
+            //     {
+            //         throw new Exception('Error while creating tables.');
+            //     }
+            // }
+            // catch(Exception $e)
+            // {
+            //     echo $e->getMessage();
+            // }
         ?>
         </div>
     </body>

@@ -38,4 +38,41 @@ class SchoolDB extends Model {
             }
             return $objects;
     }
+
+    public function getTeachersByClass($class)
+    {
+        $sqlReq = <<<REQUEST
+        SELECT teachers.first_name, teachers.last_name FROM classes_teachers 
+        LEFT JOIN teachers ON (teachers.teacher_id = classes_teachers.teacher_id) 
+        LEFT JOIN classes ON (classes.class_id = classes_teachers.class_id) WHERE classes.designation = '$class' 
+        REQUEST;
+        $objects = [];
+        $i = 0;
+        foreach($this->db->query($sqlReq) as $row)
+        {
+            $objects[] = new Teacher();
+            $objects[$i]->firstName  = $row['first_name'];
+            $objects[$i]->lastName  = $row['last_name'];
+            $i++;
+        }
+        return $objects;
+    }
+
+    public function getSubjectsByTeacher($teacher)
+    {
+        $sqlReq = <<<REQUEST
+        SELECT subject FROM teachers_subjects 
+        LEFT JOIN teachers ON (teachers.teacher_id = teachers_subjects.teacher_id) 
+        LEFT JOIN subjects ON (subjects.subject_id = teachers_subjects.subject_id) WHERE teachers.last_name = '$teacher' 
+        REQUEST;
+        $objects = [];
+        $i = 0;
+        foreach($this->db->query($sqlReq) as $row)
+        {
+            $objects[] = new Subject();
+            $objects[$i]->name  = $row['subject'];
+            $i++;
+        }
+        return $objects;
+    }
 }
